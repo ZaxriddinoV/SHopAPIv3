@@ -10,6 +10,7 @@ django-rest-knox = "*"
 gunicorn = "*"
 drf-yasg = "*"
 pillow = "*"
+whitenoise = "*"
 
 [dev-packages]
 
