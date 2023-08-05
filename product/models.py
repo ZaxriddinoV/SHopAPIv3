@@ -16,9 +16,7 @@ class Products(models.Model):
 
     product_name = models.CharField(max_length=23)
     description = models.TextField(max_length=300)
-    photo = models.ImageField(upload_to='staticfiles/product_img/', null=True, blank=True,
-                              validators=[
-                                  FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'pbg', 'heic', 'heif','png'])])
+    photo = models.CharField(max_length=1000)
 
     price = models.CharField(max_length=60)
 
