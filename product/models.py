@@ -1,5 +1,7 @@
-from django.core.validators import FileExtensionValidator
+from django.core.validators import  MinValueValidator, MaxValueValidator
 from django.db import models
+from users.models import User
+
 
 class Products(models.Model):
     MEN = 'men'
@@ -22,3 +24,17 @@ class Products(models.Model):
 
     def __str__(self):
         return self.product_name
+
+
+class LikeSave(models.Model):
+    product_name = models.ForeignKey(Products, on_delete=models.CASCADE)
+
+
+
+    user_n = models.TextField(max_length=1000)
+
+
+    def __str__(self):
+        return self.user_n
+
+

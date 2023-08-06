@@ -9,3 +9,4 @@ class User(AbstractUser):
     photo = models.ImageField(upload_to='user_photos/', null=True, blank=True,
                               validators=[
                                   FileExtensionValidator(allowed_extensions=['jpg', 'jpeg', 'pbg', 'heic', 'heif','png'])])
+
